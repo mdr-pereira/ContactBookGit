@@ -56,7 +56,9 @@ public class ContactBook {
     }
 
     //pre: phone != NULL && hasPhone(phone)
-    //TODO getContact using phone number (using searchIndexNumber)
+    public String getName(int number) {
+        return contacts[searchIndexPhone(number)].getName();
+    }
 
     //Pre: name != null && hasContact(name)
     public void setPhone(String name, int phone) {
