@@ -39,6 +39,9 @@ public class Main {
                 case ADD_CONTACT:
                     addContact(in, cBook);
                     break;
+                case REPEATED_PHONES:
+                    repeatedPhones(in, cBook);
+                    break;
                 case REMOVE_CONTACT:
                     deleteContact(in, cBook);
                     break;
@@ -99,6 +102,12 @@ public class Main {
             cBook.deleteContact(name);
             System.out.println(CONTACT_REMOVED);
         } else System.out.println(NAME_NOT_EXIST);
+    }
+
+    private static void repeatedPhones(Scanner in, ContactBook cBook) {
+        if (cBook.repeatedPhoneNumber()) {
+            System.out.println(HAS_REPEATING);
+        } else System.out.println(NO_REPEATING);
     }
 
     private static void getPhone(Scanner in, ContactBook cBook) {
