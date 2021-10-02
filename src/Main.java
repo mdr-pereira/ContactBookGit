@@ -21,6 +21,7 @@ public class Main {
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
     public static final String PHONE_NOT_EXIST = "Phone number doest not exist.";
     public static final String NO_REPEATING = "All contacts have different phone numbers.";
+    public static final String HAS_REPEATING = "There are contacts that share phone numbers.";
     public static final String NAME_NOT_EXIST = "contactBook.Contact does not exist.";
     public static final String CONTACT_ADDED = "contactBook.Contact added.";
     public static final String CONTACT_REMOVED = "contactBook.Contact removed.";
