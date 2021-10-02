@@ -19,6 +19,8 @@ public class Main {
 
     //Constantes que definem as mensagens para o utilizador
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
+    public static final String PHONE_NOT_EXIST = "Phone number doest not exist.";
+    public static final String NO_REPEATING = "All contacts have different phone numbers.";
     public static final String NAME_NOT_EXIST = "contactBook.Contact does not exist.";
     public static final String CONTACT_ADDED = "contactBook.Contact added.";
     public static final String CONTACT_REMOVED = "contactBook.Contact removed.";
@@ -105,6 +107,15 @@ public class Main {
         if (cBook.hasContact(name)) {
             System.out.println(cBook.getPhone(name));
         } else System.out.println(NAME_NOT_EXIST);
+    }
+
+    private static void getName(Scanner in, ContactBook cBook) {
+        int phone;
+        phone = in.nextInt();
+        in.nextLine();
+        if (cBook.hasPhone(phone)) {
+            System.out.println(cBook.getName(phone));
+        } else System.out.println(PHONE_NOT_EXIST);
     }
 
     private static void getEmail(Scanner in, ContactBook cBook) {
