@@ -50,6 +50,9 @@ public class ContactBook {
         return contacts[searchIndex(name)].getEmail();
     }
 
+    //pre: phone != NULL && hasPhone(phone)
+    //TODO getContact using phone number (using searchIndexNumber)
+
     //Pre: name != null && hasContact(name)
     public void setPhone(String name, int phone) {
         contacts[searchIndex(name)].setPhone(phone);
@@ -72,6 +75,8 @@ public class ContactBook {
         if (found) result = i;
         return result;
     }
+
+    //TODO searchIndexNumber (for phone number)
 
     private void resize() {
         Contact tmp[] = new Contact[2*contacts.length];
