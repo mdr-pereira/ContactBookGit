@@ -70,6 +70,27 @@ public class ContactBook {
         contacts[searchIndex(name)].setEmail(email);
     }
 
+    public boolean hasRepeatedPhone() {
+        boolean repeats = false;
+        int i = 0;
+
+        initializeIterator();
+
+        while(hasNext() && !repeats) {
+            i = currentContact + 1;
+
+            while(i < counter) {
+                if (contacts[i].getPhone() == contacts[currentContact].getPhone())
+                    repeats = true;
+
+                i++;
+            }
+            next();
+        }
+
+        return repeats;
+    }
+
     private int searchIndex(String name) {
         int i = 0;
         int result = -1;
