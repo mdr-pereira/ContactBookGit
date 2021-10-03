@@ -19,7 +19,7 @@ public class Main {
 
     //Constantes que definem as mensagens para o utilizador
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
-    public static final String PHONE_NOT_EXIST = "Phone number doest not exist.";
+    public static final String PHONE_NOT_EXIST = "Phone number does not exist.";
     public static final String NO_REPEATING = "All contacts have different phone numbers.";
     public static final String HAS_REPEATING = "There are contacts that share phone numbers.";
     public static final String NAME_NOT_EXIST = "contactBook.Contact does not exist.";
@@ -106,7 +106,7 @@ public class Main {
     }
 
     private static void repeatedPhones(Scanner in, ContactBook cBook) {
-        if (cBook.repeatedPhoneNumber()) {
+        if (cBook.hasRepeatedPhone()) {
             System.out.println(HAS_REPEATING);
         } else System.out.println(NO_REPEATING);
     }
